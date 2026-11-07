@@ -15,6 +15,10 @@ class SearchByTitleTests(unittest.TestCase):
         results = search_by_title(self.items, "Lion")
         self.assertEqual([dvd.title for dvd in results], ["The Lion King"])
 
+    def test_search_by_title_is_case_insensitive(self):
+        results = search_by_title(self.items, "lion")
+        self.assertEqual([dvd.title for dvd in results], ["The Lion King"])
+
     def test_empty_keyword_returns_all_items(self):
         self.assertEqual(search_by_title(self.items, ""), self.items)
 
