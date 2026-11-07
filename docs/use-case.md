@@ -2,8 +2,8 @@
 
 ## Tác nhân
 
-- **Khách hàng (Customer):** xem/tìm DVD và xem thông tin giỏ hàng trong bản demo.
-- **Nhân viên cửa hàng (Store operator):** thao tác thêm hoặc xóa DVD khỏi giỏ hàng.
+* **Khách hàng (Customer):** xem/tìm DVD và xem thông tin giỏ hàng trong bản demo.
+* **Nhân viên cửa hàng (Store operator):** thao tác thêm hoặc xóa DVD khỏi giỏ hàng.
 
 ## Các ca sử dụng chính
 
@@ -24,3 +24,36 @@
 1. Người dùng nhập từ khóa.
 2. Hệ thống duyệt danh sách DVD.
 3. Hệ thống trả về các DVD có tiêu đề chứa từ khóa.
+
+\## Acceptance Criteria
+
+
+
+\### Search by title
+
+\- Search must be case-insensitive.
+
+\- An empty keyword returns all DVDs.
+
+\- A matching keyword returns the relevant DVDs.
+
+
+
+\### Search by category
+
+\- Search must be case-insensitive.
+
+\- An empty category returns all DVDs.
+
+
+
+\### Cart management
+
+\- The cart accepts a maximum of 20 DVDs.
+
+\- The 21st DVD must be rejected.
+
+\- An empty cart displays an appropriate message.
+
+\- The total cost must be calculated correctly.
+
