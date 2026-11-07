@@ -7,6 +7,10 @@ phiên bản tuân theo [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-11-07
+### Fixed
+- `search_by_title()` không phân biệt hoa thường (Issue #20).
+
 ## [1.0.0] - 2026-11-07
 ### Added
 - `Cart.print_cart()` và thông báo riêng khi giỏ rỗng.
