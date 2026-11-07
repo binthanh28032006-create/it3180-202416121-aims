@@ -34,3 +34,7 @@ class Cart:
 
     def total_cost(self):
         return sum(item.cost for item in self.items)
+
+    def total_cost_with_discount(self, percent):
+        """Return the total after discount (implementation fixed in Lab 03)."""
+        return self.total_cost() * percent / 100
