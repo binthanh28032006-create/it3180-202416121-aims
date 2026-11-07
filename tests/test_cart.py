@@ -29,6 +29,16 @@ class CartTests(unittest.TestCase):
             self.assertTrue(cart.remove_dvd(dvd))
         self.assertEqual(cart.items, [])
 
+    def test_discounted_total(self):
+        cart = Cart()
+        cart.items = [DigitalVideoDisc("A", cost=40), DigitalVideoDisc("B", cost=60)]
+        self.assertEqual(cart.total_cost_with_discount(20), 80)
+
+    def test_discount_percent_must_be_valid(self):
+        cart = Cart()
+        with self.assertRaises(ValueError):
+            cart.total_cost_with_discount(150)
+
     def test_print_empty_cart(self):
         cart = Cart()
         output = io.StringIO()
