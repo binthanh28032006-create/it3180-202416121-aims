@@ -25,6 +25,9 @@ class Cart:
         return False
 
     def print_cart(self):
+        if not self.items:
+            print("The cart is empty")
+            return
         for index, dvd in enumerate(self.items, start=1):
             print(f"{index}. {dvd.title}: {dvd.cost:.2f} $")
         print(f"Total cost: {self.total_cost():.2f} $")
