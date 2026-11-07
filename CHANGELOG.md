@@ -7,6 +7,11 @@ phiên bản tuân theo [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-11-07
+### Added
+- `Cart.sort_by_title()` và `Cart.sort_by_cost()`.
+- `search_by_category()` để tìm DVD theo thể loại.
+
 ## [1.0.0] - 2026-11-07
 ### Added
 - `Cart.print_cart()` và thông báo riêng khi giỏ rỗng.
