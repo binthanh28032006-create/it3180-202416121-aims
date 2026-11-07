@@ -32,6 +32,14 @@ class Cart:
             print(f"{index}. {dvd.title}: {dvd.cost:.2f} $")
         print(f"Total cost: {self.total_cost():.2f} $")
 
+    def sort_by_title(self):
+        """Return a new list of DVDs sorted by title (case-insensitive)."""
+        return sorted(self.items, key=lambda dvd: dvd.title.casefold())
+
+    def sort_by_cost(self):
+        """Return a new list of DVDs sorted by cost, then title."""
+        return sorted(self.items, key=lambda dvd: (dvd.cost, dvd.title.casefold()))
+
     def total_cost(self):
         return sum(item.cost for item in self.items)
 

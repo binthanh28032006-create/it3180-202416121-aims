@@ -39,6 +39,16 @@ class CartTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             cart.total_cost_with_discount(150)
 
+    def test_sort_by_title(self):
+        cart = Cart()
+        cart.items = [DigitalVideoDisc("Star Wars"), DigitalVideoDisc("Aladdin")]
+        self.assertEqual([dvd.title for dvd in cart.sort_by_title()], ["Aladdin", "Star Wars"])
+
+    def test_sort_by_cost(self):
+        cart = Cart()
+        cart.items = [DigitalVideoDisc("B", cost=20), DigitalVideoDisc("A", cost=10)]
+        self.assertEqual([dvd.title for dvd in cart.sort_by_cost()], ["A", "B"])
+
     def test_print_empty_cart(self):
         cart = Cart()
         output = io.StringIO()
